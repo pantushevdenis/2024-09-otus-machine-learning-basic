@@ -1,4 +1,4 @@
-num = 6143
+num = 643
 all_roman = [
     (1000, 'M'),
     (900, 'CM'),
@@ -18,7 +18,7 @@ roman = ''
 while num > 0:
     for i, r in all_roman:
         while num >= i:
-            roman = roman + r
+            roman += r
             num -= i
 
 print(roman)
