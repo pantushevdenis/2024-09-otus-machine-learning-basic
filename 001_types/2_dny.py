@@ -6,8 +6,8 @@
 # 6 -> 1
 # 14 -> 4
 
-days_number_to_vacation = 16
-
+# days_number_to_vacation = 16
+days_number_to_vacation = int(input("ВВедите число дней до ближайшего отпуска: "))
 assert days_number_to_vacation >= 0
 
 NUMBER_WORK_DAYS_IN_WEEK = 5
