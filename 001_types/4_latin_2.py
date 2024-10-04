@@ -1,6 +1,12 @@
 # num = 643
-num = int(input("Введите число больше 0 и меньше 2000: "))
-assert 0 < num < 2000, "Число должно быть больше 0 и меньше 2000"
+from builtins import print
+
+try:
+    num = int(input("Введите число больше 0 и меньше 2000: "))
+    assert 0 < num < 2000
+except:
+    print("Число должно быть больше 0 и меньше 2000")
+    exit()
 
 all_roman = [
     (1000, 'M'),

@@ -4,8 +4,12 @@
 # 30789 -> 38709
 from hmac import new
 
-num = int(input("Введите пятизначное целое число: "))
-assert 10000 <= num <= 999999
+try:
+    num = int(input("Введите пятизначное целое число: "))
+    assert 10000 <= num <= 99999
+except:
+    print("Число должно быть больше либо равно 10000 и меньше либо равно 99999")
+    exit()
 
 # print(type(num))
 str_num = str(num)

@@ -3,12 +3,16 @@
 # 3 -> III
 # 15 -> XV
 # 3 234 -> CCXXXIV
-from builtins import divmod
+from builtins import divmod, print
 
 # input data
 # decimal = 436
-decimal = int(input("Введите целое положительное число: "))
-assert 0 < decimal < 999, "Число должно быть больше 0 и меньше 1000"
+try:
+    decimal = int(input("Введите целое положительное число: "))
+    assert 0 < decimal < 999
+except:
+    print("Число должно быть больше 0 и меньше 1000")
+    exit()
 
 c, rem_C = divmod(decimal, 100)
 x, i = divmod(rem_C, 10)

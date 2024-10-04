@@ -6,10 +6,8 @@
 # 5 -> True
 
 
-input_str = input("Введите данные: ")
-
 try:
-    data = float(input_str)
+    data = float(input("Введите данные: "))
     if data > 0:
         print(True)
     else:
