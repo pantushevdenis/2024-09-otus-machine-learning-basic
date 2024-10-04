@@ -5,15 +5,14 @@
 # .67. -> False
 # 5 -> True
 
-# data = float(input("Введите данные: "))
-# при вводе любого значения возвращает str
 
-# data = 5.6
-# data = 0.78
-# data = ".67."
-data = 5  # будет int, но согласно кейсам должно возвращать true
+input_str = input("Введите данные: ")
 
-if (type(data) is float) or (type(data) is int) and data > 0:
-    print(True)
-else:
+try:
+    data = float(input_str)
+    if data > 0:
+        print(True)
+    else:
+        print(False)
+except:
     print(False)
