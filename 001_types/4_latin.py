@@ -6,13 +6,15 @@
 from builtins import divmod
 
 # input data
-decimal = 436
+# decimal = 436
+decimal = int(input("Введите целое положительное число: "))
+assert 0 < decimal < 999, "Число должно быть больше 0 и меньше 1000"
 
 c, rem_C = divmod(decimal, 100)
 x, i = divmod(rem_C, 10)
 latin = ''
 
-print(c)
+# print(c)
 if c == 9:
     latin = latin + "CM"
 elif c >= 5:
@@ -21,7 +23,7 @@ elif c == 4:
     latin = latin + "CD"
 else:
     latin = latin + c * "C"
-print(x)
+# print(x)
 if x == 9:
     latin = latin + "XC"
 elif x >= 5:
@@ -30,7 +32,7 @@ elif x == 4:
     latin = latin + "XL"
 else:
     latin = latin + x * "X"
-print(i)
+# print(i)
 if i == 9:
     latin = latin + "IX"
 elif i >= 5:
@@ -40,5 +42,5 @@ elif i == 4:
 else:
     latin = latin + i * "I"
 
-#output
+# output
 print(latin)
