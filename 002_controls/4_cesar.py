@@ -16,13 +16,8 @@ except:
 res_arr = []
 for ch in str_data:
     a = ord(ch)
-    if 33 <= a <= 122:
-        res = a + k
-        while res > 122:
-            res = 33 + (res - 122) - 1
-        res_arr.append(chr(res))
-    else:
-        res_arr.append(chr(a))
+    res = (a + k - 33) % 94 + 33 if 33 <= a <= 126 else a
+    res_arr.append(chr(res))
 res_str = "".join(res_arr)
 
 print(res_str)
