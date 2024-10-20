@@ -13,9 +13,12 @@ data = [[0, 1, 1, 0],
 
 # data = [[0, 1, 1, 0], [1, 0, 1, 0], [1, 1, 0, 1]]
 
-ticket_nums = 2
-print("data:", data)
-print("ticket nums", ticket_nums)
+
+try:
+    ticket_nums = int(input("Введите количество билетов: "))
+    assert 0 <= ticket_nums
+except:
+    print("Исходными данными должно быть положительное число")
 
 num_rows = len(data)
 finded = False
