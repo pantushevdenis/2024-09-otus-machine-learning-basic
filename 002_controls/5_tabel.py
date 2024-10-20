@@ -26,11 +26,11 @@
 list = []
 
 while True:
-    str = input("Введите предмет, фамилию, оценку. Для выхода - пробел. :")
-    if str == " ":
+    str_data = input("Введите предмет, фамилию, оценку. Для выхода - пробел. :")
+    if str_data == " ":
         break
     try:
-        lesson, surname, grade_str = str.split()
+        lesson, surname, grade_str = str_data.split()
         grade = int(grade_str)
         assert 1 <= grade <= 5
     except:
@@ -40,11 +40,11 @@ while True:
     print(lesson, surname, grade)
     list.append((lesson, surname, grade))
 
-# list.append(("Математика", "иванов", 3))
-# list.append(("Математика", "иванов", 4))
-# list.append(("Математика", "иванов", 4))
-# list.append(("Литература", "иванов", 4))
-# list.append(("Литература", "иванов", 5))
+# list.append(("Математика", "Иванов", 3))
+# list.append(("Математика", "Иванов", 4))
+# list.append(("Математика", "Иванов", 4))
+# list.append(("Литература", "Иванов", 4))
+# list.append(("Литература", "Иванов", 5))
 # list.append(("Литература", "Петров", 5))
 # list.append(("Литература", "Петров", 6))
 
@@ -60,6 +60,6 @@ print()
 for l_key in grades_for_studens:
     print(l_key)
     for s_key in grades_for_studens[l_key]:
-        print(s, " ".join(str(d) for d in grades_for_studens[l_key][s_key]))
+        print(s_key, " ".join(str(d) for d in grades_for_studens[l_key][s_key]))
     print()
 
