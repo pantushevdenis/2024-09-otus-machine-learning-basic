@@ -69,5 +69,9 @@ print(f"standard_deviation: {st.stdev(num_friends)}")
 print(f"standard_deviation without last: {st.stdev(num_friends_sorted[:-1])}")  # влияние выброса
 
 print(f"my_covariance: {mst.my_covariance(num_friends, daily_minutes)}")
+print(f"covariance: {st.covariance(num_friends, daily_minutes)}")
 print(f"my_correlation: {mst.my_correlation(num_friends, daily_minutes)}")
+print(f"correlation: {st.correlation(num_friends, daily_minutes)}")
 print(f"my_correlation without first: {mst.my_correlation(num_friends[1:], daily_minutes[1:])}")
+
+
